@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import './quiz.dart';
 import './result.dart';
@@ -25,7 +27,7 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
-  Void _answerQuestion(int score) {
+  void _answerQuestion(int score) {
     _totalScore = _totalScore + score;
     setState(() {
       _questionIndex = _questionIndex + 1;
@@ -73,7 +75,7 @@ class _MyAppState extends State<MyApp> {
             ? Quiz(
                 answerQuestion: _answerQuestion,
                 questionIndex: _questionIndex,
-                questions: _questions,
+                questions:_questions,
               )
             : Result(_totalScore, _resetQuiz),
       ),
